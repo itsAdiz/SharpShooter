@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Adiz">
+    <meta name="description" content="Are you ready to unleash your inner sharpshooter? - Adiz">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
+    <title>SharpShooter🎯</title>
+</head>
+
+<body onload="adizObject()">
+    <div class="wrapper">
+
+        <div class="status">
+            <span class="score">Score : <span id="score">0</span></span>
+            <span class="gameName">SharpShooter🎯</span>
+            <button id="btn" onclick="resumeGame()">Start</button>
+        </div>
+        <div class="gameMenu">
+            <label for="gameTime"> Time: </label>
+            <select id="gameTime" oninput="getUserTimeChoice()" >
+                <option value="60">1m </option>
+                <option value="30">30s </option>
+                <option value="15" selected>15s </option>
+            </select>
+
+            <label for="gameDif"> Difficulty: </label>
+            <select id="gameDif" oninput="getUserLevelChoice()">
+                <option value="200">Hard </option>
+                <option value="500">Medium</option>
+                <option value="1000" selected>Normal </option>
+            </select>
+        </div>
+        <div class="gameScreen"> 
+            <h3 class="timer">0</h3>
+            <h4 class="gameOverMsg"></h4>
+        </div>
+        <div class="footer">
+            <a href="mailto:bc200415701@vu.edu.pk">Suggestions / Bugs Report </a>
+            <span>V : 1.0</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <audio src="assets/sounds/btnClick.mp3"></audio>
+</body>
+
+</html>

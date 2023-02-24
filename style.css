@@ -1,0 +1,132 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    user-select: none;
+}
+
+/* wrapper */
+.wrapper {
+    margin: 2px;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* game status */
+.status {
+    border: double;
+    height: 5%;
+    margin: 5px;
+    padding: .5em;
+    text-align: center;
+
+}
+
+.status>.score {
+    position: absolute;
+    margin: 0 1em;
+    padding-top: 4px;
+    left: 0;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+.status>.gameName {
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 1.2em;
+
+}
+
+.status>button {
+    position: absolute;
+    margin: 0px 2em;
+    right: 0;
+    /* font-weight: bolder; */
+    font-size: 1.1em;
+    /* border:solid white; */
+
+}
+.status > .sound{
+    position: absolute;
+    right: 0;
+    margin: 0px 5.5em;
+    font-size: 1.1em;
+    transform: rotate(180deg);
+}
+.gameMenu{
+    border: double;
+    padding:2px 0px;
+    margin: 5px;
+}
+/* game screen */
+.gameScreen {
+    position: relative;
+    border: double;
+    height: 77%;
+    margin: 5px;
+    cursor: crosshair;
+    text-align: center;
+
+}
+
+.gameScreen>.timer {
+    user-select: none;
+    text-align: center;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: 1px solid black;
+    width: 15%;
+    border-top: none;
+    border-radius: 0 0px 90px 90px;
+    color: white;
+    background-image: linear-gradient(red, black 29px);
+}
+.gameScreen > .gameOverMsg{
+    font-size: 2em;
+    animation: blink 0.6s linear infinite alternate;
+}
+
+
+
+
+/* dots */
+.gameScreen>span {
+    position: absolute;
+    display: inline-block;
+    /* height: 20px;
+    width: 20px;
+    border: 1px dashed #050505;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 20px;
+    background-color: rgb(166, 255, 181); */
+    /* box-sizing: border-box; */
+    font-size: 3em;
+
+}
+
+.footer {
+    font-size: 1em;
+    margin: 10px 5px;
+    padding: 5px;
+    text-align: center;
+    user-select: text;
+}
+
+.footer>span {
+    position: absolute;
+    right: 0;
+    margin-right: 5px;
+
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
