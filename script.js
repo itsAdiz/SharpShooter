@@ -26,6 +26,7 @@ const getUserLevelChoice = () => {
     }
     // timerPopaat
 const sTimer = () => {
+    scoreUpdate.innerHTML = userScore;
     timer = setInterval(() => {
         if (timerCounter > 0) {
             timerCounter--;
@@ -35,6 +36,7 @@ const sTimer = () => {
             pauseGame()
             // alert(`💩 Your score is ${userScore}`);
             go.innerHTML = `Your score is ${userScore} 👀 `;
+            userScore = 0;
         }
     }, 1000);
 }
@@ -97,6 +99,7 @@ const pauseGame = () => {
         adizObjects();
         document.querySelector("#gameTime").disabled = true;
         document.querySelector("#gameDif").disabled = true;
+        
     }
     else {
         timerCounter = 15;

@@ -28,14 +28,14 @@ body {
     padding-top: 4px;
     left: 0;
     font-weight: bolder;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .status>.gameName {
     position: relative;
     color: rgb(0, 0, 0);
     font-weight: bolder;
-    font-size: 1.2em;
+    font-size: 1.1em;
 
 }
 
@@ -48,17 +48,12 @@ body {
     /* border:solid white; */
 
 }
-.status > .sound{
-    position: absolute;
-    right: 0;
-    margin: 0px 5.5em;
-    font-size: 1.1em;
-    transform: rotate(180deg);
-}
+
 .gameMenu{
     border: double;
     padding:2px 0px;
     margin: 5px;
+    font-weight: bolder;
 }
 /* game screen */
 .gameScreen {
