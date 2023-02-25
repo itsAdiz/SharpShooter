@@ -1,15 +1,15 @@
 body {
     padding: 0;
     margin: 0;
-    height: 100vh;
+    height: 99vh;
     user-select: none;
 }
 
 /* wrapper */
 .wrapper {
-    margin: 2px;
+    margin: auto;
     height: 100%;
-    overflow: hidden;
+    
 }
 
 /* game status */
@@ -51,7 +51,7 @@ body {
 
 .gameMenu{
     border: double;
-    padding:2px 0px;
+    padding:1% 0px;
     margin: 5px;
     font-weight: bolder;
 }
@@ -105,8 +105,8 @@ body {
 
 .footer {
     font-size: 1em;
-    margin: 10px 5px;
-    padding: 5px;
+    margin-bottom: 0px;
+    /* padding: 5px; */
     text-align: center;
     user-select: text;
 }
@@ -114,7 +114,7 @@ body {
 .footer>span {
     position: absolute;
     right: 0;
-    margin-right: 5px;
+    margin-right: 8px;
 
 }
 @keyframes blink {
