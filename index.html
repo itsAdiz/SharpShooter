@@ -26,6 +26,7 @@
         <div class="gameMenu">
             <label for="gameTime"> Time: </label>
             <select id="gameTime" oninput="getUserTimeChoice()" >
+                <option value="300">5m </option>
                 <option value="60">1m </option>
                 <option value="30">30s </option>
                 <option value="15" selected>15s </option>
@@ -37,9 +38,11 @@
                 <option value="500">Medium</option>
                 <option value="1000" selected>Normal </option>
             </select>
+            
         </div>
         <div class="gameScreen"> 
             <h3 class="timer">0</h3>
+            <h3 class="topScore">Top Score : 0</h3>
             <h4 class="gameOverMsg"></h4>
         </div>
         <div class="footer">

@@ -10,7 +10,29 @@ let isPause = true;
 let timerCounter = 15;
 let levelDifficulty = 1000;
 let pauseTime = 0;
+let topScore = 0;
 let timer;
+// topScore
+const setToScore = () => {
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem("topScore", topScore);
+    
+      } else {
+        document.querySelector(".topScore").innerHTML = "Error";
+      }
+}
+const getToScore = () => {
+    if (typeof (Storage) !== "undefined") {
+        if (localStorage.getItem("topScore") !== null) {
+            topScore = localStorage.getItem("topScore");
+            document.querySelector(".topScore").innerHTML = `Top Score : ${topScore}`;
+        }
+    } else {
+        document.querySelector(".topScore").innerHTML = "Error";
+    }
+}
+getToScore();
+
 // timeSlection
 const getUserTimeChoice = () => {
     
@@ -23,7 +45,8 @@ const getUserLevelChoice = () => {
     let lc = document.querySelector("#gameDif");
        
         levelDifficulty = lc.value;
-    }
+}
+   
     // timerPopaat
 const sTimer = () => {
     scoreUpdate.innerHTML = userScore;
@@ -34,8 +57,12 @@ const sTimer = () => {
         } else {
             clearInterval(timer);
             pauseGame()
-            // alert(`💩 Your score is ${userScore}`);
             go.innerHTML = `Your score is ${userScore} 👀 `;
+            if (userScore > topScore) { 
+                topScore = userScore;
+                document.querySelector(".topScore").innerHTML = `Top Score : ${topScore}`;
+                setToScore();
+            }
             userScore = 0;
         }
     }, 1000);
@@ -43,22 +70,25 @@ const sTimer = () => {
 
 const adizObjects = () => {
 
-    if (!isPause) {
+    if (!isPause ) {
 
         for (let i = 0; i < 1; i++) {
             let adiz = document.createElement('span');
             adiz.setAttribute('id', `b${i}`)
             adiz.innerHTML = "🤪";
             adiz.setAttribute('onclick', 'rmObjects(event)')
-            adiz.style.left = `${Math.floor(Math.random() * 90)}%`;
+            adiz.style.left = `${Math.floor(Math.random() * 85)}%`;
             adiz.style.top = `${Math.floor(Math.random() * 90)}%`;
             se.appendChild(adiz)
             setTimeout(() => {
                 if (adiz.parentNode) {
                     adiz.parentNode.removeChild(adiz);
                 }
-            }, levelDifficulty);
-
+                console.log(spanRate)
+                console.log(levelDifficulty)
+            },levelDifficulty);
+            
+            
         }
         setTimeout(adizObjects, levelDifficulty);
         
